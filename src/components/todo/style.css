@@ -1,0 +1,31 @@
+.todo-container{
+      width: 600px;
+      margin: 50px auto;
+      
+}
+
+.todo-title{
+      color: rgb(0, 0, 0);
+      font-size: 40px;
+}
+
+.todo-data{
+      border: 1px solid black;
+      padding: 10px;
+      margin-top: 10px;
+}
+button{
+      margin: 5px;
+}
+
+.img-data{
+      text-align: center;
+      margin-top: 15px;
+}
+
+.logo{
+      height: 6em;
+      padding: 1.5em;
+      will-change: filter;
+      transition: filter 300ms;
+}
