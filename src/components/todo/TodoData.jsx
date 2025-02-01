@@ -1,13 +1,29 @@
-const TodoData =(prosp) => {
-      console.log("check", prosp)
+const TodoData = (props) => {
 
-      const {name, age, data} = prosp;
-      return(
-            <div className='todo-data'>
-          <div>danh sách todo1 {name}</div>
-          <div>danh sách todo2</div>
-        </div>
-      )
+  const { todoList, deleteTodo } = props;
+
+  const handleClick =  (id) => {
+    deleteTodo(id)
+  }
+ 
+
+  return (
+      <div className='todo-data'>
+          {todoList.map((item, index) => {
+           return (
+       
+           <div className="todo-item" key={item.id}>         
+           <div> {item.name}</div>
+            <button onClick={() => handleClick(item.id)}>delete</button>
+            </div>
+            
+          )
+          })}
+          
+          
+          
+      </div>
+  )
 }
 
 export default TodoData;
